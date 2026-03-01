@@ -1,167 +1,387 @@
-<!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UPr
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>DEVEN MBUYANE PORTOLIO</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Deven Mbuyane | Data Analyst</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0a0e17;
+      --surface: #111827;
+      --accent: #00d4ff;
+      --accent2: #7c3aed;
+      --text: #e2e8f0;
+      --muted: #64748b;
+      --border: #1e293b;
+      --card: #141c2e;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.6; overflow-x: hidden; }
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+    /* NAV */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.2rem 4rem; display: flex; justify-content: space-between; align-items: center; background: rgba(10,14,23,0.9); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+    .nav-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--accent); letter-spacing: 0.05em; text-decoration: none; }
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.85rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--accent); }
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1>DEVEN MBUYANE<br />
-						PORTFOLIO</h1>
-						<p>Data Analyst well versed in SQL, R, Python, Tableau, Microsoft Office  
-							<p><a href="https://linkedin.com/in/deven-mbuyane-435526309">@Deven Mbuyane</a> 
-						 
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
+    /* HERO */
+    .hero { min-height: 100vh; display: flex; align-items: center; padding: 8rem 4rem 4rem; position: relative; overflow: hidden; }
+    .hero-glow { position: absolute; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(0,212,255,0.07) 0%, transparent 70%); top: -100px; right: -100px; pointer-events: none; }
+    .hero-glow2 { position: absolute; width: 400px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(124,58,237,0.06) 0%, transparent 70%); bottom: 0; left: 200px; pointer-events: none; }
+    .hero-content { max-width: 760px; position: relative; z-index: 1; }
+    .hero-tag { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(0,212,255,0.08); border: 1px solid rgba(0,212,255,0.2); color: var(--accent); font-size: 0.78rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.4rem 1rem; border-radius: 100px; margin-bottom: 2rem; animation: fadeUp 0.6s ease both; }
+    .hero-tag::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: pulse 2s ease infinite; }
+    @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.4; transform: scale(0.8); } }
+    .hero h1 { font-family: 'Syne', sans-serif; font-size: clamp(3rem, 7vw, 5.5rem); font-weight: 800; line-height: 1.0; letter-spacing: -0.02em; margin-bottom: 1.5rem; animation: fadeUp 0.6s ease 0.1s both; }
+    .hero h1 span { background: linear-gradient(135deg, var(--accent), var(--accent2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .hero-desc { font-size: 1.15rem; color: var(--muted); max-width: 540px; line-height: 1.7; margin-bottom: 2.5rem; font-weight: 300; animation: fadeUp 0.6s ease 0.2s both; }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; animation: fadeUp 0.6s ease 0.3s both; }
+    .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 1.8rem; border-radius: 8px; font-weight: 500; font-size: 0.9rem; text-decoration: none; transition: all 0.2s; cursor: pointer; border: none; font-family: 'DM Sans', sans-serif; }
+    .btn-primary { background: var(--accent); color: var(--bg); }
+    .btn-primary:hover { background: #00b8d9; transform: translateY(-1px); }
+    .btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+    .btn-ghost:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-1px); }
+    .hero-stats { display: flex; gap: 3rem; margin-top: 4rem; padding-top: 3rem; border-top: 1px solid var(--border); animation: fadeUp 0.6s ease 0.4s both; }
+    .stat-num { font-family: 'Syne', sans-serif; font-size: 2rem; font-weight: 800; color: var(--accent); }
+    .stat-label { font-size: 0.8rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">DEVEN MBUYANE</a>
-					</header>
+    /* SECTIONS */
+    section { padding: 6rem 4rem; }
+    .section-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.75rem; }
+    .section-title { font-family: 'Syne', sans-serif; font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 700; line-height: 1.15; margin-bottom: 1rem; }
+    .section-sub { color: var(--muted); font-size: 1rem; max-width: 480px; margin-bottom: 3.5rem; font-weight: 300; }
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">Projects</a></li>
+    /* SKILLS */
+    #skills { background: var(--surface); }
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; }
+    .skill-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; transition: all 0.25s; }
+    .skill-card:hover { border-color: var(--accent); transform: translateY(-3px); box-shadow: 0 8px 32px rgba(0,212,255,0.08); }
+    .skill-icon { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; margin-bottom: 1rem; }
+    .skill-card h3 { font-family: 'Syne', sans-serif; font-size: 0.95rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .skill-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1rem; }
+    .skill-tag { font-size: 0.7rem; padding: 0.25rem 0.6rem; border-radius: 100px; background: rgba(255,255,255,0.05); color: var(--muted); border: 1px solid var(--border); }
 
-						
-						
-							</ul>
-						<ul class="icons">
-							<li><a href="https://linkedin.com/in/deven-mbuyane-435526309" class="icon brands alt fa-linkedin"><span class="label">linkedin</span></a></li>
-									<li><a href="https://github.com/Sibusiso08" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
+    /* PROJECTS */
+    #projects { background: var(--bg); }
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 1.5rem; }
+    .project-card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; transition: all 0.25s; display: flex; flex-direction: column; }
+    .project-card:hover { border-color: rgba(0,212,255,0.3); transform: translateY(-4px); box-shadow: 0 16px 48px rgba(0,0,0,0.4); }
+    .project-card.featured { grid-column: span 2; border-color: rgba(0,212,255,0.15); }
+    .project-header { padding: 1.75rem 1.75rem 1rem; }
+    .project-badges { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1rem; }
+    .badge { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; padding: 0.25rem 0.7rem; border-radius: 100px; }
+    .badge-sql { background: rgba(251,191,36,0.1); color: #fbbf24; border: 1px solid rgba(251,191,36,0.2); }
+    .badge-python { background: rgba(59,130,246,0.1); color: #60a5fa; border: 1px solid rgba(59,130,246,0.2); }
+    .badge-excel { background: rgba(16,185,129,0.1); color: #34d399; border: 1px solid rgba(16,185,129,0.2); }
+    .badge-tableau { background: rgba(239,68,68,0.1); color: #f87171; border: 1px solid rgba(239,68,68,0.2); }
+    .badge-powerbi { background: rgba(251,146,60,0.1); color: #fb923c; border: 1px solid rgba(251,146,60,0.2); }
+    .badge-featured { background: rgba(0,212,255,0.1); color: var(--accent); border: 1px solid rgba(0,212,255,0.2); }
+    .badge-case { background: rgba(124,58,237,0.1); color: #a78bfa; border: 1px solid rgba(124,58,237,0.2); }
+    .project-card h3 { font-family: 'Syne', sans-serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem; line-height: 1.3; }
+    .project-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.6; }
+    .project-highlights { padding: 0 1.75rem; list-style: none; flex: 1; }
+    .project-highlights li { font-size: 0.82rem; color: var(--muted); padding: 0.35rem 0 0.35rem 1rem; position: relative; border-bottom: 1px solid rgba(255,255,255,0.03); }
+    .project-highlights li::before { content: '→'; position: absolute; left: 0; color: var(--accent); font-size: 0.75rem; }
+    .project-footer { padding: 1.25rem 1.75rem; border-top: 1px solid var(--border); display: flex; justify-content: flex-end; }
+    .project-link { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--accent); text-decoration: none; font-size: 0.82rem; font-weight: 500; transition: gap 0.2s; }
+    .project-link:hover { gap: 0.7rem; }
 
-				<!-- Main -->
-					<div id="main">
+    /* ABOUT */
+    #about { background: var(--surface); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .about-text p { color: var(--muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.25rem; font-weight: 300; }
+    .about-text p strong { color: var(--text); font-weight: 500; }
+    .about-highlights { display: flex; flex-direction: column; gap: 1rem; }
+    .highlight-item { display: flex; align-items: flex-start; gap: 1rem; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem; transition: border-color 0.2s; }
+    .highlight-item:hover { border-color: var(--accent); }
+    .highlight-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 0.1rem; }
+    .highlight-item h4 { font-family: 'Syne', sans-serif; font-size: 0.9rem; font-weight: 700; margin-bottom: 0.25rem; }
+    .highlight-item p { font-size: 0.82rem; color: var(--muted); margin: 0; }
 
-						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									
-									<h2><a href="https://public.tableau.com/views/CompanyFinancialsTableauDashboard/FinancialDashboard?:language=en-GB&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link">Company Financials Tableau Dashboard Project<br />
-									</a></h2>
-									<p>Designed a financial dashboard to visualize key business metrics</p>
-								</header>
-								<a href="https://public.tableau.com/views/CompanyFinancialsTableauDashboard/FinancialDashboard?:language=en-GB&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" class="image main"><img src="images/Company Financial.jpg" alt="" /></a>
-								<ul class="actions special">
-									<li><a href="https://public.tableau.com/views/CompanyFinancialsTableauDashboard/FinancialDashboard?:language=en-GB&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" class="button large">View Project</a></li>
-								</ul>
-							</article>
+    /* CONTACT */
+    #contact { background: var(--bg); text-align: center; }
+    .contact-card { max-width: 600px; margin: 0 auto; background: var(--card); border: 1px solid var(--border); border-radius: 20px; padding: 3rem; }
+    .contact-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; }
 
-						<!-- Posts -->
-							<section class="posts">
-								<article>
-									<header>
-										
-										<h2><a href="https://github.com/Sibusiso08/Restaurant-Orders-MySQL-Project">Restaurant Orders<br />(MySQL Project)
-										</a></h2>
-									</header>
-									<a href="https://github.com/Sibusiso08/Restaurant-Orders-MySQL-Project" class="image fit"><img src="images/restaurant.jpg" alt="" /></a>
-									<p> •Created and queried a relational database to analyze customer orders <p>•Derived behavioral insights using JOINs, GROUP BY, and subqueries</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/Sibusiso08/Restaurant-Orders-MySQL-Project" class="button">View Project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										
-										<h2><a href="https://github.com/Sibusiso08/COFFEE-SALES-PROJECT">Coffee Sales<br />
-										(Project)</a></h2>
-									</header>
-									<a href="https://github.com/Sibusiso08/COFFEE-SALES-PROJECT" class="image fit"><img src="images/Cofee Sales.jpg" alt="" /></a>
-									<p>•Cleaned and transformed raw sales data using Microsoft Excel <p> •Built interactive dashboards in Tableau to present sales insights </p>
-									<ul class="actions special">
-										<li><a href="https://github.com/Sibusiso08/COFFEE-SALES-PROJECT" class="button">View Project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										
-										<h2><a href="https://github.com/Sibusiso08/Company-Financials-Project/blob/main/Company%20Financials%20Microsoft%20Excel%20Project.xlsx">Comapany Financials<br />
-										(Excel Project)</a></h2>
-									</header>
-									<a href="https://github.com/Sibusiso08/Company-Financials-Project/blob/main/Company%20Financials%20Microsoft%20Excel%20Project.xlsx" class="image fit"><img src="images/Company Financial.jpg" alt="" /></a>
-									<p>Performed data cleaning and analysis in Excel</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/Sibusiso08/Company-Financials-Project/blob/main/Company%20Financials%20Microsoft%20Excel%20Project.xlsx" class="button">View Project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										
-										<h2><a href="https://github.com/Sibusiso08/Projects/blob/main/Bike%20Sales%20Excel%20Project.xlsx">Bike Sales<br />
-										(Excel Project)</a></h2>
-									</header>
-									<a href="https://github.com/Sibusiso08/Projects/blob/main/Bike%20Sales%20Excel%20Project.xlsx" class="image fit"><img src="images/Bike Sales.jpg" alt="" /></a>
-									<p> •Analyzed buyer behavior using demographic and financial data.<p>•Segmented data by gender, region, and marital status to identify trends in bike purchasing.
-										<p>•Created a pivot table to compare average income of bike buyers vs. non-buyers.<p>•Built an interactive Excel dashboard to present insights clearly and support decision-making</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/Sibusiso08/Projects/blob/main/Bike%20Sales%20Excel%20Project.xlsx" class="button">View Project</a></li>
-									</ul>
-								</article>
-								
+    /* FOOTER */
+    footer { text-align: center; padding: 2rem 4rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.8rem; }
+    footer span { color: var(--accent); }
 
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { display: none; }
+      section { padding: 4rem 1.5rem; }
+      .hero { padding: 6rem 1.5rem 3rem; }
+      .hero-stats { gap: 1.5rem; }
+      .project-card.featured { grid-column: span 1; }
+      .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+    }
+  </style>
+</head>
+<body>
 
+  <nav>
+    <a href="#" class="nav-logo">DM.</a>
+    <ul class="nav-links">
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="https://linkedin.com/in/deven-mbuyane-435526309" target="_blank" class="btn btn-primary" style="padding:0.55rem 1.2rem;font-size:0.82rem;">Hire Me</a>
+  </nav>
 
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-glow"></div>
+    <div class="hero-glow2"></div>
+    <div class="hero-content">
+      <div class="hero-tag">Available for Work · Pretoria, South Africa</div>
+      <h1>Turning raw data<br/>into <span>clear decisions</span></h1>
+      <p class="hero-desc">Data Analyst with hands-on experience across SQL, Python, Excel, Power BI and Tableau. I build end-to-end analytics solutions — from messy datasets to business-ready insights.</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View My Work →</a>
+        <a href="https://github.com/Sibusiso08" target="_blank" class="btn btn-ghost">GitHub</a>
+        <a href="https://linkedin.com/in/deven-mbuyane-435526309" target="_blank" class="btn btn-ghost">LinkedIn</a>
+      </div>
+      <div class="hero-stats">
+        <div><div class="stat-num">9+</div><div class="stat-label">Projects</div></div>
+        <div><div class="stat-num">5+</div><div class="stat-label">Tools</div></div>
+        <div><div class="stat-num">1yr+</div><div class="stat-label">Experience</div></div>
+      </div>
+    </div>
+  </section>
 
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="section-label">What I Work With</div>
+    <h2 class="section-title">Technical Skills</h2>
+    <p class="section-sub">A full analytics stack — from querying databases to building interactive dashboards.</p>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-icon" style="background:rgba(251,191,36,0.1);">🗃️</div>
+        <h3>SQL & Databases</h3>
+        <p>Querying, cleaning, and transforming data with relational databases.</p>
+        <div class="skill-tags"><span class="skill-tag">MySQL</span><span class="skill-tag">JOINs</span><span class="skill-tag">Subqueries</span><span class="skill-tag">Window Functions</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon" style="background:rgba(59,130,246,0.1);">🐍</div>
+        <h3>Python</h3>
+        <p>Exploratory data analysis, visualisation, and statistical insights.</p>
+        <div class="skill-tags"><span class="skill-tag">Pandas</span><span class="skill-tag">Matplotlib</span><span class="skill-tag">NumPy</span><span class="skill-tag">Jupyter</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon" style="background:rgba(16,185,129,0.1);">📊</div>
+        <h3>Excel</h3>
+        <p>Data cleaning, pivot tables, and interactive dashboards.</p>
+        <div class="skill-tags"><span class="skill-tag">Pivot Tables</span><span class="skill-tag">VLOOKUP</span><span class="skill-tag">Power Query</span><span class="skill-tag">Dashboards</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon" style="background:rgba(239,68,68,0.1);">📈</div>
+        <h3>Data Visualisation</h3>
+        <p>Interactive dashboards and charts that communicate insights clearly.</p>
+        <div class="skill-tags"><span class="skill-tag">Power BI</span><span class="skill-tag">Tableau</span><span class="skill-tag">Canva</span></div>
+      </div>
+    </div>
+  </section>
 
-						<section class="split contact">
-							<section class="alt">
-								<h3>Location</h3>
-								<p><br />
-								Pretoria, South Africa 0122</p>
-							</section>
-							<section>
-								<h3>Phone</h3>
-								<p><a href="#">(073) 593-5411</a></p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a href="#">devenmbuyane@gmail.com</a></p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-label">My Work</div>
+    <h2 class="section-title">Projects</h2>
+    <p class="section-sub">End-to-end analytics projects spanning finance, sales, HR, and market research.</p>
+    <div class="projects-grid">
 
-									<li><a href="https://linkedin.com/in/deven-mbuyane-435526309" class="icon brands alt fa-linkedin"><span class="label">linkedin</span></a></li>
-									<li><a href="https://github.com/Sibusiso08" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
+      <div class="project-card featured">
+        <div class="project-header">
+          <div class="project-badges"><span class="badge badge-featured">⭐ Featured</span><span class="badge badge-sql">SQL</span><span class="badge badge-excel">Excel</span><span class="badge badge-python">Python</span></div>
+          <h3>Top 100 SaaS Companies (2025) — Market & Revenue Analysis</h3>
+          <p>Analysed financial and operational data for the world's top 100 SaaS companies to surface trends in ARR, funding, workforce efficiency, and industry performance.</p>
+        </div>
+        <ul class="project-highlights">
+          <li>Identified that high funding does not consistently correlate with high ARR — revealing key business efficiency gaps</li>
+          <li>Cleaned and validated datasets across revenue, funding, and employee metrics using SQL and Excel</li>
+          <li>Visualised ARR distribution, funding vs revenue correlation, and industry benchmarks in Python</li>
+          <li>Delivered a presentation-ready summary translating technical findings for non-technical stakeholders</li>
+        </ul>
+        <div class="project-footer"><a href="https://github.com/Sibusiso08" target="_blank" class="project-link">View on GitHub →</a></div>
+      </div>
 
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-					</div>
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-badges"><span class="badge badge-python">Python</span><span class="badge badge-powerbi">Power BI</span></div>
+          <h3>Global AI Job Market & Salary Trends</h3>
+          <p>Analysed global AI job and salary data to identify trends by role, region, and experience level.</p>
+        </div>
+        <ul class="project-highlights">
+          <li>Explored compensation patterns across data science, ML engineering, and analyst roles globally</li>
+          <li>Built an interactive Power BI dashboard visualising demand and salary benchmarks</li>
+          <li>Identified regions and seniority levels with the highest growth in AI hiring</li>
+        </ul>
+        <div class="project-footer"><a href="https://github.com/Sibusiso08" target="_blank" class="project-link">View on GitHub →</a></div>
+      </div>
 
-			</div>
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-badges"><span class="badge badge-sql">MySQL</span></div>
+          <h3>Global Layoffs Analysis</h3>
+          <p>Analysed global layoff data to identify industry trends, peak layoff periods, and regional impact.</p>
+        </div>
+        <ul class="project-highlights">
+          <li>Used time-series aggregation and window functions to track layoff waves over time</li>
+          <li>Identified industries and countries hit hardest during tech downturns</li>
+          <li>Built a structured data cleaning pipeline to handle inconsistencies in raw records</li>
+        </ul>
+        <div class="project-footer"><a href="https://github.com/Sibusiso08/Layoffs-Project-MySQL" target="_blank" class="project-link">View on GitHub →</a></div>
+      </div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-badges"><span class="badge badge-sql">MySQL</span></div>
+          <h3>Restaurant Orders Analysis</h3>
+          <p>Built and queried a relational database to analyse customer ordering behaviour and sales trends.</p>
+        </div>
+        <ul class="project-highlights">
+          <li>Used JOINs, GROUP BY, and subqueries to surface top-performing menu items</li>
+          <li>Identified peak ordering periods and customer frequency patterns</li>
+          <li>Derived actionable insights to support menu and operational decisions</li>
+        </ul>
+        <div class="project-footer"><a href="https://github.com/Sibusiso08/Restaurant-Orders-MySQL-Project" target="_blank" class="project-link">View on GitHub →</a></div>
+      </div>
 
-	</body>
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-badges"><span class="badge badge-excel">Excel</span><span class="badge badge-tableau">Tableau</span></div>
+          <h3>Coffee Sales Analysis</h3>
+          <p>Cleaned and analysed sales data to identify revenue trends and product performance over time.</p>
+        </div>
+        <ul class="project-highlights">
+          <li>Cleaned and transformed raw sales data for accuracy and consistency</li>
+          <li>Designed Tableau dashboards to track KPIs and monthly performance</li>
+          <li>Identified top-selling products and seasonal revenue patterns</li>
+        </ul>
+        <div class="project-footer"><a href="https://github.com/Sibusiso08/COFFEE-SALES-PROJECT" target="_blank" class="project-link">View on GitHub →</a></div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-badges"><span class="badge badge-excel">Excel</span></div>
+          <h3>Bike Sales — Buyer Behaviour Analysis</h3>
+          <p>Analysed demographic and financial data to understand what drives bicycle purchase decisions.</p>
+        </div>
+        <ul class="project-highlights">
+          <li>Segmented buyers by gender, region, marital status, and income level</li>
+          <li>Created pivot tables comparing average income of buyers vs non-buyers</li>
+          <li>Built an interactive Excel dashboard to present insights for decision-making</li>
+        </ul>
+        <div class="project-footer"><a href="https://github.com/Sibusiso08/Bike-Sales-Excel" target="_blank" class="project-link">View on GitHub →</a></div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-badges"><span class="badge badge-case">Case Study</span><span class="badge badge-sql">SQL</span></div>
+          <h3>Rhythm City Records — Genre Sales Analysis</h3>
+          <p>Fictional analytics case study for a Durban-based music store facing revenue imbalances across music genres.</p>
+        </div>
+        <ul class="project-highlights">
+          <li>Investigated revenue disparities across genres using structured SQL queries</li>
+          <li>Proposed data-backed strategies to rebalance inventory and drive sales</li>
+          <li>Demonstrated real-world problem-solving in a business context</li>
+        </ul>
+        <div class="project-footer"><a href="https://github.com/Sibusiso08/Rhythm_City_Records_Analysis" target="_blank" class="project-link">View on GitHub →</a></div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-badges"><span class="badge badge-excel">Excel</span><span class="badge badge-tableau">Tableau</span></div>
+          <h3>Company Financials Dashboard</h3>
+          <p>Financial dashboard tracking revenue, expenses, and net profit across quarters.</p>
+        </div>
+        <ul class="project-highlights">
+          <li>Tracked quarterly revenue, cost, and profit trends across business units</li>
+          <li>Designed a Tableau dashboard for executive-level reporting</li>
+          <li>Structured Excel data model to support fast filtering and drill-down</li>
+        </ul>
+        <div class="project-footer"><a href="https://public.tableau.com/views/CompanyFinancialsTableauDashboard/FinancialDashboard" target="_blank" class="project-link">View Dashboard →</a></div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-badges"><span class="badge badge-case">Case Study</span></div>
+          <h3>Sweet Crumbs Bakery — Organizational Analysis</h3>
+          <p>Business case study applying the 9-S Framework to analyse organizational misalignment and growth strategy.</p>
+        </div>
+        <ul class="project-highlights">
+          <li>Mapped internal alignment gaps using a structured business framework</li>
+          <li>Identified scalability challenges and proposed operational improvements</li>
+          <li>Demonstrated strategic thinking alongside analytical skills</li>
+        </ul>
+        <div class="project-footer"><a href="https://github.com/Sibusiso08/CASE-STUDY-Organizational-Alignment-Analysis" target="_blank" class="project-link">View on GitHub →</a></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-grid">
+      <div class="about-text">
+        <div class="section-label">Who I Am</div>
+        <h2 class="section-title">About Me</h2>
+        <p>I'm <strong>Sibusiso "Deven" Mbuyane</strong>, a Data Analyst based in Pretoria, South Africa. I work with real-world datasets to uncover patterns, build dashboards, and help people make smarter, data-backed decisions.</p>
+        <p>My background is hands-on — I've delivered end-to-end analytics projects independently, from raw data collection and cleaning all the way to polished, presentation-ready insights. I care deeply about making complex findings understandable to everyone, not just technical audiences.</p>
+        <p>I'm currently completing my <strong>Google Advanced Data Analytics Certificate</strong> and actively seeking my first full-time or remote data analyst role.</p>
+        <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
+          <a href="https://linkedin.com/in/deven-mbuyane-435526309" target="_blank" class="btn btn-primary">Connect on LinkedIn</a>
+          <a href="https://github.com/Sibusiso08" target="_blank" class="btn btn-ghost">View GitHub</a>
+        </div>
+      </div>
+      <div class="about-highlights">
+        <div class="highlight-item">
+          <div class="highlight-icon">📍</div>
+          <div><h4>Location</h4><p>Pretoria, South Africa — Open to remote &amp; hybrid roles</p></div>
+        </div>
+        <div class="highlight-item">
+          <div class="highlight-icon">🎓</div>
+          <div><h4>Certifications</h4><p>Google Analytics Certified · Google Advanced Data Analytics (In Progress)</p></div>
+        </div>
+        <div class="highlight-item">
+          <div class="highlight-icon">💼</div>
+          <div><h4>Experience</h4><p>Freelance Data Analyst since Jan 2024 — real projects, real deliverables</p></div>
+        </div>
+        <div class="highlight-item">
+          <div class="highlight-icon">🎯</div>
+          <div><h4>Looking For</h4><p>Junior / Entry-level Data Analyst roles · Internships · Contract work</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-label">Get In Touch</div>
+    <h2 class="section-title">Let's Work Together</h2>
+    <p class="section-sub" style="margin:0 auto 2.5rem;">Open to full-time roles, internships, freelance projects, and collaborations.</p>
+    <div class="contact-card">
+      <p style="color:var(--muted);font-size:0.95rem;line-height:1.7;">I'm actively looking for data analyst opportunities — remote, hybrid, or in Pretoria. Whether you have a role to fill, a project to analyse, or just want to connect, feel free to reach out.</p>
+      <div class="contact-links">
+        <a href="mailto:devenmbuyane@gmail.com" class="btn btn-primary">📧 devenmbuyane@gmail.com</a>
+        <a href="https://linkedin.com/in/deven-mbuyane-435526309" target="_blank" class="btn btn-ghost">LinkedIn</a>
+        <a href="https://github.com/Sibusiso08" target="_blank" class="btn btn-ghost">GitHub</a>
+      </div>
+      <p style="color:var(--muted);font-size:0.78rem;margin-top:1.5rem;">📞 +27 73 593 5411</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 <span>Sibusiso "Deven" Mbuyane</span> · Data Analyst · Pretoria, South Africa</p>
+  </footer>
+
+</body>
 </html>
