@@ -81,6 +81,7 @@
     .badge-tableau { background: rgba(239,68,68,0.1); color: #f87171; border: 1px solid rgba(239,68,68,0.2); }
     .badge-powerbi { background: rgba(251,146,60,0.1); color: #fb923c; border: 1px solid rgba(251,146,60,0.2); }
     .badge-featured { background: rgba(0,212,255,0.1); color: var(--accent); border: 1px solid rgba(0,212,255,0.2); }
+    .badge-ml { background: rgba(124,58,237,0.1); color: #a78bfa; border: 1px solid rgba(124,58,237,0.2); }
     .badge-case { background: rgba(124,58,237,0.1); color: #a78bfa; border: 1px solid rgba(124,58,237,0.2); }
     .project-card h3 { font-family: 'Syne', sans-serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem; line-height: 1.3; }
     .project-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.6; }
@@ -144,15 +145,15 @@
     <div class="hero-content">
       <div class="hero-tag">Available for Work · Pretoria, South Africa</div>
       <h1>Turning raw data<br/>into <span>clear decisions</span></h1>
-      <p class="hero-desc">Data Analyst with hands-on experience across SQL, Python, Excel, Power BI and Tableau. I build end-to-end analytics solutions — from messy datasets to business-ready insights.</p>
+      <p class="hero-desc">Data and Insights Analyst with hands-on experience across SQL, Python, Excel, Tableau, and Machine Learning. I build end-to-end analytics solutions, from messy datasets to business-ready insights.</p>
       <div class="hero-actions">
         <a href="#projects" class="btn btn-primary">View My Work →</a>
         <a href="https://github.com/Sibusiso08" target="_blank" class="btn btn-ghost">GitHub</a>
         <a href="https://linkedin.com/in/deven-mbuyane-435526309" target="_blank" class="btn btn-ghost">LinkedIn</a>
       </div>
       <div class="hero-stats">
-        <div><div class="stat-num">11+</div><div class="stat-label">Projects</div></div>
-        <div><div class="stat-num">5+</div><div class="stat-label">Tools</div></div>
+        <div><div class="stat-num">12+</div><div class="stat-label">Projects</div></div>
+        <div><div class="stat-num">6+</div><div class="stat-label">Tools</div></div>
         <div><div class="stat-num">1yr+</div><div class="stat-label">Experience</div></div>
       </div>
     </div>
@@ -162,7 +163,7 @@
   <section id="skills">
     <div class="section-label">What I Work With</div>
     <h2 class="section-title">Technical Skills</h2>
-    <p class="section-sub">A full analytics stack — from querying databases to building interactive dashboards.</p>
+    <p class="section-sub">A full analytics stack, from querying databases and building dashboards to training machine learning models.</p>
     <div class="skills-grid">
       <div class="skill-card">
         <div class="skill-icon" style="background:rgba(251,191,36,0.1);">🗃️</div>
@@ -177,6 +178,12 @@
         <div class="skill-tags"><span class="skill-tag">Pandas</span><span class="skill-tag">Matplotlib</span><span class="skill-tag">NumPy</span><span class="skill-tag">Jupyter</span></div>
       </div>
       <div class="skill-card">
+        <div class="skill-icon" style="background:rgba(124,58,237,0.1);">🤖</div>
+        <h3>Machine Learning</h3>
+        <p>Building and interpreting predictive models for business decision-making.</p>
+        <div class="skill-tags"><span class="skill-tag">Scikit-learn</span><span class="skill-tag">Random Forest</span><span class="skill-tag">Classification</span><span class="skill-tag">Feature Importance</span></div>
+      </div>
+      <div class="skill-card">
         <div class="skill-icon" style="background:rgba(16,185,129,0.1);">📊</div>
         <h3>Excel</h3>
         <p>Data cleaning, pivot tables, and interactive dashboards.</p>
@@ -186,7 +193,7 @@
         <div class="skill-icon" style="background:rgba(239,68,68,0.1);">📈</div>
         <h3>Data Visualisation</h3>
         <p>Interactive dashboards and charts that communicate insights clearly.</p>
-        <div class="skill-tags"><span class="skill-tag">Power BI</span><span class="skill-tag">Tableau</span><span class="skill-tag">Canva</span></div>
+        <div class="skill-tags"><span class="skill-tag">Tableau</span><span class="skill-tag">Power BI</span><span class="skill-tag">Canva</span></div>
       </div>
     </div>
   </section>
@@ -195,28 +202,28 @@
   <section id="projects">
     <div class="section-label">My Work</div>
     <h2 class="section-title">Projects</h2>
-    <p class="section-sub">End-to-end analytics projects spanning cybersecurity, logistics, finance, sales, and market research.</p>
+    <p class="section-sub">End-to-end analytics projects spanning healthcare, cybersecurity, logistics, finance, sales, and market research.</p>
     <div class="projects-grid">
 
       <div class="project-card featured">
         <div class="project-header">
-          <div class="project-badges"><span class="badge badge-featured">⭐ Featured</span><span class="badge badge-sql">SQL</span><span class="badge badge-python">Python</span></div>
-          <h3>Cybersecurity Attack Intelligence — SQL &amp; Python Analytics</h3>
-          <p>Analysed 13,867 documented cybersecurity attack scenarios across 63 categories — from SQL Injection and Malware to AI/LLM Exploits and Quantum Cryptography threats. Full pipeline from raw data to multi-panel dashboard.</p>
+          <div class="project-badges"><span class="badge badge-featured">⭐ Featured</span><span class="badge badge-sql">SQL</span><span class="badge badge-python">Python</span><span class="badge badge-tableau">Tableau</span><span class="badge badge-ml">ML</span></div>
+          <h3>Healthcare Insurance Claims Analysis, Predictive Risk Modelling</h3>
+          <p>End-to-end analysis of a 100,000-patient healthcare insurance claims dataset, covering data cleaning, MySQL querying, three Tableau dashboards, and a Random Forest ML model predicting high-risk patients with 99.58% accuracy.</p>
         </div>
         <ul class="project-highlights">
-          <li>Identified and resolved 7 data quality issues — including 266 duplicate rows, data bleed, and MITRE technique inconsistencies — using a structured Python cleaning pipeline</li>
-          <li>Ran 10 structured SQL queries in MySQL covering attack categories, MITRE ATT&CK techniques, targeted systems, high-impact risks, and detection coverage</li>
-          <li>Grouped 8,833 unique attack types into 19 meaningful families using SQL CASE logic, reducing complexity for actionable reporting</li>
-          <li>Built a 9-panel Matplotlib dashboard visualising attack families, targeted systems, source distribution, and threat impacts across the full dataset</li>
+          <li>Engineered and encoded 51 features from demographic, clinical, lifestyle, and claims data to train a binary Random Forest classifier with 99.58% accuracy and a ROC-AUC of 0.9999</li>
+          <li>Identified age, chronic condition count, and smoking status as the top three risk drivers through feature importance analysis</li>
+          <li>Built three Tableau dashboards covering executive KPIs, patient demographics and risk patterns, and claims cost drivers across 100,000 patients</li>
+          <li>Key insight: current smokers average 56% higher medical costs than non-smokers; patients over 65 cost 62% more than patients under 18</li>
         </ul>
-        <div class="project-footer"><a href="https://github.com/Sibusiso08/cybersecurity-attack-analysis" target="_blank" class="project-link">View on GitHub →</a></div>
+        <div class="project-footer"><a href="https://github.com/Sibusiso08/Medical-Insurance-Cost-Prediction-Analysis" target="_blank" class="project-link">View on GitHub →</a></div>
       </div>
 
       <div class="project-card featured">
         <div class="project-header">
           <div class="project-badges"><span class="badge badge-featured">⭐ Featured</span><span class="badge badge-sql">SQL</span><span class="badge badge-python">Python</span></div>
-          <h3>Logistics Fleet Operations Analysis — SQL &amp; Python Dashboard</h3>
+          <h3>Logistics Fleet Operations Analysis, SQL and Python Dashboard</h3>
           <p>Built an end-to-end analytics pipeline on a 14-table relational logistics dataset covering 85,410 trips and $298.6M in fleet revenue across 3 years (2022–2024).</p>
         </div>
         <ul class="project-highlights">
@@ -228,16 +235,15 @@
         <div class="project-footer"><a href="https://github.com/Sibusiso08/logistics-operations-analysis" target="_blank" class="project-link">View on GitHub →</a></div>
       </div>
 
-      <div class="project-card featured">
+      <div class="project-card">
         <div class="project-header">
-          <div class="project-badges"><span class="badge badge-featured">⭐ Featured</span><span class="badge badge-sql">SQL</span><span class="badge badge-excel">Excel</span><span class="badge badge-python">Python</span></div>
-          <h3>Top 100 SaaS Companies (2025) — Market & Revenue Analysis</h3>
+          <div class="project-badges"><span class="badge badge-sql">SQL</span><span class="badge badge-excel">Excel</span><span class="badge badge-python">Python</span></div>
+          <h3>Top 100 SaaS Companies (2025), Market & Revenue Analysis</h3>
           <p>Analysed financial and operational data for the world's top 100 SaaS companies to surface trends in ARR, funding, workforce efficiency, and industry performance.</p>
         </div>
         <ul class="project-highlights">
-          <li>Identified that high funding does not consistently correlate with high ARR — revealing key business efficiency gaps</li>
+          <li>Identified that high funding does not consistently correlate with high ARR, revealing key business efficiency gaps</li>
           <li>Cleaned and validated datasets across revenue, funding, and employee metrics using SQL and Excel</li>
-          <li>Visualised ARR distribution, funding vs revenue correlation, and industry benchmarks in Python</li>
           <li>Delivered a presentation-ready summary translating technical findings for non-technical stakeholders</li>
         </ul>
         <div class="project-footer"><a href="https://github.com/Sibusiso08" target="_blank" class="project-link">View on GitHub →</a></div>
@@ -302,7 +308,7 @@
       <div class="project-card">
         <div class="project-header">
           <div class="project-badges"><span class="badge badge-excel">Excel</span></div>
-          <h3>Bike Sales — Buyer Behaviour Analysis</h3>
+          <h3>Bike Sales, Buyer Behaviour Analysis</h3>
           <p>Analysed demographic and financial data to understand what drives bicycle purchase decisions.</p>
         </div>
         <ul class="project-highlights">
@@ -316,7 +322,7 @@
       <div class="project-card">
         <div class="project-header">
           <div class="project-badges"><span class="badge badge-case">Case Study</span><span class="badge badge-sql">SQL</span></div>
-          <h3>Rhythm City Records — Genre Sales Analysis</h3>
+          <h3>Rhythm City Records, Genre Sales Analysis</h3>
           <p>Fictional analytics case study for a Durban-based music store facing revenue imbalances across music genres.</p>
         </div>
         <ul class="project-highlights">
@@ -344,7 +350,7 @@
       <div class="project-card">
         <div class="project-header">
           <div class="project-badges"><span class="badge badge-case">Case Study</span></div>
-          <h3>Sweet Crumbs Bakery — Organizational Analysis</h3>
+          <h3>Sweet Crumbs Bakery, Organizational Analysis</h3>
           <p>Business case study applying the 9-S Framework to analyse organizational misalignment and growth strategy.</p>
         </div>
         <ul class="project-highlights">
@@ -364,9 +370,9 @@
       <div class="about-text">
         <div class="section-label">Who I Am</div>
         <h2 class="section-title">About Me</h2>
-        <p>I'm <strong>Sibusiso "Deven" Mbuyane</strong>, a Data Analyst based in Pretoria, South Africa. I work with real-world datasets to uncover patterns, build dashboards, and help people make smarter, data-backed decisions.</p>
-        <p>My background is hands-on — I've delivered end-to-end analytics projects independently, from raw data collection and cleaning all the way to polished, presentation-ready insights. I care deeply about making complex findings understandable to everyone, not just technical audiences.</p>
-        <p>I'm currently completing my <strong>Google Advanced Data Analytics Certificate</strong> and hold a <strong>PSIRA Security Certificate — Grades E, D &amp; C</strong>, giving me a unique crossover background in both data analytics and security operations. I'm actively seeking my first full-time or remote data analyst role.</p>
+        <p>I'm <strong>Sibusiso "Deven" Mbuyane</strong>, a Data and Insights Analyst based in Pretoria, South Africa. I work with real-world datasets to uncover patterns, build dashboards, and help people make smarter, data-backed decisions.</p>
+        <p>My background is hands-on. I've delivered 12+ end-to-end analytics projects independently, from raw data cleaning and SQL querying all the way to Tableau dashboards and machine learning models. I recently expanded my skill set into ML, building a Random Forest classifier that predicts high-risk insurance patients with 99.58% accuracy. I care deeply about making complex findings understandable to everyone, not just technical audiences.</p>
+        <p>I'm currently completing my <strong>Google Advanced Data Analytics Certificate</strong> and hold a <strong>PSIRA Security Certificate, Grades E, D and C</strong>, giving me a unique crossover background in both data analytics and security operations.</p>
         <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
           <a href="https://linkedin.com/in/deven-mbuyane-435526309" target="_blank" class="btn btn-primary">Connect on LinkedIn</a>
           <a href="https://github.com/Sibusiso08" target="_blank" class="btn btn-ghost">View GitHub</a>
@@ -375,19 +381,19 @@
       <div class="about-highlights">
         <div class="highlight-item">
           <div class="highlight-icon">📍</div>
-          <div><h4>Location</h4><p>Pretoria, South Africa — Open to remote &amp; hybrid roles</p></div>
+          <div><h4>Location</h4><p>Pretoria, South Africa, open to remote and hybrid roles</p></div>
         </div>
         <div class="highlight-item">
           <div class="highlight-icon">🎓</div>
-          <div><h4>Certifications</h4><p>Google Analytics Certified · Google Advanced Data Analytics (In Progress) · PSIRA Security Certificate — Grades E, D &amp; C (2026)</p></div>
+          <div><h4>Certifications</h4><p>Google Analytics Certified, Google Advanced Data Analytics (In Progress), PSIRA Security Certificate, Grades E, D and C (2026)</p></div>
         </div>
         <div class="highlight-item">
           <div class="highlight-icon">💼</div>
-          <div><h4>Experience</h4><p>Freelance Data Analyst since Jan 2024 — real projects, real deliverables</p></div>
+          <div><h4>Experience</h4><p>Freelance Data and Insights Analyst since Jan 2024, 12+ real projects, real deliverables</p></div>
         </div>
         <div class="highlight-item">
           <div class="highlight-icon">🎯</div>
-          <div><h4>Looking For</h4><p>Junior / Entry-level Data Analyst roles · Internships · Contract work</p></div>
+          <div><h4>Looking For</h4><p>Data Analyst, Research Analyst, and Operations Analyst roles, remote, hybrid, or in Gauteng and KwaZulu-Natal</p></div>
         </div>
       </div>
     </div>
@@ -399,7 +405,7 @@
     <h2 class="section-title">Let's Work Together</h2>
     <p class="section-sub" style="margin:0 auto 2.5rem;">Open to full-time roles, internships, freelance projects, and collaborations.</p>
     <div class="contact-card">
-      <p style="color:var(--muted);font-size:0.95rem;line-height:1.7;">I'm actively looking for data analyst opportunities — remote, hybrid, or in Pretoria. Whether you have a role to fill, a project to analyse, or just want to connect, feel free to reach out.</p>
+      <p style="color:var(--muted);font-size:0.95rem;line-height:1.7;">I'm actively looking for data analyst opportunities, remote, hybrid, or in Pretoria. Whether you have a role to fill, a project to analyse, or just want to connect, feel free to reach out.</p>
       <div class="contact-links">
         <a href="/cdn-cgi/l/email-protection#fc98998a9992919e89859d9299bc9b919d9590d29f9391" class="btn btn-primary">📧 <span class="__cf_email__" data-cfemail="ff9b9a899a91929d8a869e919abf98929e9693d19c9092">[email&#160;protected]</span></a>
         <a href="https://linkedin.com/in/deven-mbuyane-435526309" target="_blank" class="btn btn-ghost">LinkedIn</a>
